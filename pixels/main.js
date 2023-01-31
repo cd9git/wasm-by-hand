@@ -5,8 +5,6 @@ var draw_wasm;
 var memory;
 var init;
 
-//init();
-
 (async() => {
     let obj = await WebAssembly.instantiateStreaming(fetch('pix.wasm'));
     draw_wasm = obj.instance.exports.draw;
